@@ -1,0 +1,31 @@
+{
+  "name": "benk-studio-test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.22.5",
+    "@fullcalendar/common": "^5.11.5",
+    "@fullcalendar/core": "^6.1.8",
+    "@fullcalendar/interaction": "^6.1.8",
+    "@fullcalendar/react": "^6.1.8",
+    "@fullcalendar/timegrid": "^6.1.8",
+    "@types/node": "20.5.1",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.15",
+    "next": "13.4.19",
+    "next-transpile-modules": "^10.0.1",
+    "postcss": "8.4.28",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.66.1",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
+  }
+}

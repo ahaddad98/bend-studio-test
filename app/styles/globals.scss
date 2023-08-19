@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-style: none;
+  width: 40px;
+  height: 40px;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+  border-style: none;
+  border: 1px solid #7f7f7f;
+  padding-top: 15px;
+}
+
+.fc .fc-daygrid-day-bg .fc-highlight {
+  z-index: 3;
+
+  .fc-daygrid-day-top {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #ee0139;
+    border-radius: 100px;
+  }
+}
+
+.fc-direction-ltr .fc-toolbar>*> :not(:first-child) {
+  margin-left: 0.75em;
+  display: none;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  width: 500px;
+  background-color: #5a5a5a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+  border: 1px solid #7f7f7f;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px;
+  font-size: 12px;
+  margin: 0
+}
+
+.fc .fc-daygrid-day-frame {
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fc .fc-daygrid-day-top {
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 100px;
+}
+
+.fc-daygrid-bg-harness{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fc .fc-highlight {
+  border-style: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #ee0139;
+  position: initial;
+}
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child)  {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  background: transparent;
+  border-style: none;
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  margin-left: -1px;
+  background: transparent;
+  border-style: none;
+}
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: transparent;
+}
+.fc .fc-day-other .fc-daygrid-day-top {
+  display: none;
+}
