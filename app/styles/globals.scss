@@ -27,19 +27,20 @@ body {
 .fc-theme-standard td,
 .fc-theme-standard th {
   border-style: none;
-  width: 40px;
-  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
 }
 
 .fc-theme-standard .fc-scrollgrid {
   border-style: none;
   border: 1px solid #7f7f7f;
   padding-top: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .fc .fc-daygrid-day-bg .fc-highlight {
   z-index: 3;
-
   .fc-daygrid-day-top {
     display: flex;
     flex-direction: row-reverse;
@@ -62,8 +63,10 @@ body {
   margin-bottom: 1.5em;
   border: 1px solid #7f7f7f;
   border-top-left-radius: 20px;
+  border-bottom: 0px;
   border-top-right-radius: 20px;
-  padding: 10px;
+  padding-left: 20px;
+  padding-block: 5px;
   font-size: 12px;
   margin: 0
 }
@@ -87,19 +90,22 @@ body {
   align-items: center;
   justify-content: center;
 }
-.fc .fc-highlight {
-  border-style: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background-color: #ee0139;
-  position: initial;
-}
+// .fc .fc-highlight {
+//   border-style: none;
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 100%;
+//   background-color: #ee0139;
+//   position: initial;
+// }
 .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child)  {
   border-bottom-right-radius: 0px;
   border-top-right-radius: 0px;
   background: transparent;
   border-style: none;
+  color: #d0d0d0;
+  font-size: 15px;
+  line-height: 10px;
 }
 
 .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
@@ -108,10 +114,61 @@ body {
   margin-left: -1px;
   background: transparent;
   border-style: none;
+  color: #d0d0d0;
+  font-size: 15px;
+  line-height: 10px;
 }
 .fc .fc-daygrid-day.fc-day-today {
   background-color: transparent;
 }
 .fc .fc-day-other .fc-daygrid-day-top {
   display: none;
+}
+.fc .fc-toolbar-title {
+  font-size: 20px;
+  margin: 0px;
+}
+
+.fc .fc-view-harness-active > .fc-view {
+  background: #313131;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.fc-toolbar-title {
+  font-size: 20px;
+}
+
+.fc-toolbar-title .fc-month {
+  font-size: 10px;
+}
+
+.fc-toolbar-title .small {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.fc-toolbar-title .large {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.fc-daygrid-bg-harness {
+  .fc-highlight {
+    background-color: #ee0139;
+    border-radius: 100%;
+
+  }
+}
+.fc .fc-daygrid-day-frame {
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.fc-scrollgrid-sync-inner{
+  width: 40px;
 }

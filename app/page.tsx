@@ -1,6 +1,6 @@
 "use client"
 import "./styles/globals.scss";
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import FullCalendar from "@fullcalendar/react";
 import interactionPlugin from "@fullcalendar/interaction";
 import dayGridPlugin from '@fullcalendar/daygrid'
@@ -12,8 +12,23 @@ interface CalendarEvent {
 }
 const englishDayNames = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 
-export default function Home() {
 
+
+
+export default function Home() {
+  useEffect(() => {
+    const h2Element: any = document.querySelector('.fc-toolbar-title');
+    const text : any= h2Element.textContent;
+    const [month, year] = text.split(' ');
+    if (h2Element)
+    {
+      h2Element.innerHTML = `
+      <span class="small">${month}</span>
+      <span class="large">${year}</span>
+      `;
+    }
+  },[])
+  
 
   const [events, setEvents] = useState<any>([
   ]);
@@ -59,6 +74,7 @@ export default function Home() {
           center: "",
           right: "prev,next today",
         }}
+        titleFormat={{ year: 'numeric', month: 'short' }}
         initialView="dayGridMonth"
         selectMirror={true}
         dayMaxEvents={true}
